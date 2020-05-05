@@ -1,0 +1,62 @@
+What is the longest river in South America?
+A Amazon (correct)
+B
+C
+D
+
+
+Which Country is the largest in the world by surface area?
+USA
+China
+Russia (Correct)
+Canada
+
+Which of these countries has three national capitals?
+The Netherlands
+Israel
+Bolivia
+South Africa (correct)
+
+
+In which country is the Angel Falls, world's highest uninterrupted waterfall?
+Brazil
+Indonesia
+Venezuela (correct)
+Uganda
+
+What is by area the smallest independent country on Earth?
+Vatican City (correct)
+Monaco
+Nauru
+San Marino
+
+What is the approximate size of the Earth's equator?
+30,000km/18,641mi
+20,000km/12,427mi
+10,000km/6,214mi
+40,000km/24,855mi (correct)
+
+Quiz Over
+Good try!
+You got 3 out of 5 answers correct!
+Try again
+
+.question-number,
+.question,
+.options,
+.button,
+.answers-tracker{
+    float: left;
+    width: 100
+}
+
+
+
+
+
+
+
+
+
+
+
