@@ -53,10 +53,15 @@ Try again
 
 
 
-
-
-
-
-
+<div class="quiz-over">
+    <div class="box">
+    <h1>
+        Good try!<br>
+        You got <span class="correct-answers"></span> out of <span class="total-question2"> 
+        </span> answers correct! <br>
+    </h1>
+    <button type="button" onclick="tryAgain()">Try Again</button>
+</div>
+</div>
 
 

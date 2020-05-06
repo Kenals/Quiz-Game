@@ -88,7 +88,7 @@ function enableOptions(){
 }
 
 function validate(){
-  if(!option[0].classList.contains("disabled")){
+  if(option[0].classList.contains("disabled")){
       alert("Please Choose One Option")
   } 
   else{
