@@ -100,6 +100,7 @@ function validate(){
 function next(){
     Validate();
 }
+
 function randomQuestion(){
     let randomNumber=Math.floor(Math.random()*questions.length);
     let hitDuplicate=0;
@@ -114,6 +115,7 @@ for(let i=0; i<myArray.length; i++){
         break;
     }
   }
+
   if (hitDuplicate==1){
       randomQuestion();
   } 

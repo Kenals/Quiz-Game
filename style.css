@@ -153,7 +153,7 @@ background-size: 50%;
     z-index: 10;
     left:0;
     top:0;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -170,6 +170,7 @@ display: flex;
     color: olivedrab;
     max-width: 700px;
     font-size: large;
+    flex-basis:  700px;
 }
 
 .quiz-over .box button{
