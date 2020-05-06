@@ -77,7 +77,7 @@ function disabledOptions(){
 
 function enableOptions(){
     for(let i=0; i<options.length; i++){
-        options[i].classList.remove("disabled", "correct", "wrong");
+        options[i].classList.remove("disabled","correct", "wrong");
     }
   }
     
@@ -99,7 +99,7 @@ function randomQuestion(){
     let randomNumber=Math.floor(Math.random()*questions.length);
     questionIndex=randomNumber;
     myArray.push(questionIndex);
-    console.log("myArray:"+myArray);
+    console.log("myArray:"+myArray)
     load();
 }
 
