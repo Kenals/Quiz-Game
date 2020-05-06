@@ -9,6 +9,7 @@ const op3=document.querySelector(".option3");
 const op4=document.querySelector(".option4");
 let questionIndex;
 let index=0;
+let myArray=[];
 
 
 //Questions, options, answers
@@ -74,13 +75,19 @@ function disabledOptions(){
     }
 }
 
+function enableOptions(){
+    for(let i=0; i<options.length; i++){
+        options[i].classList.remove("disabled", "correct", "wrong");
+    }
+  }
+    
 function validate(){
     if(!options[0].classList.contains("disabled")){
-        alert("Please Choose one option")
+        alert("Please Selecto one option")
     }
     else{
+        enableOptions();
         randomQuestion();
-   
     }
 }
 
@@ -91,6 +98,8 @@ function next(){
 function randomQuestion(){
     let randomNumber=Math.floor(Math.random()*questions.length);
     questionIndex=randomNumber;
+    myArray.push(questionIndex);
+    console.log("myArray:"+myArray);
     load();
 }
 
