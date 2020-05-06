@@ -90,7 +90,7 @@ function enableOptions(){
     
 function validate(){
     if(!options[0].classList.contains("disabled")){
-        alert("Please Selecto one option")
+        alert("Please Choose one option")
     }
     else{
         enableOptions();
@@ -99,7 +99,7 @@ function validate(){
 }
 
 function next(){
-    Validate();
+    validate();
 }
 
 function randomQuestion(){
