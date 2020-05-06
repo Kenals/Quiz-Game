@@ -1,7 +1,10 @@
+
 const options=document.querySelector(".options").children;
 const answerTrackerContainer=document.querySelector(".answers-tracker");
 const questionNumberSpan=document.querySelector(".question-num-value");
 const totalQuestionSpan=document.querySelector(".total-question");
+const correctAnswerSpan=document.querySelector(".correct-answers");
+const totalQuestionSpan2=document.querySelector(".total-question2");
 const question=document.querySelector(".question");
 const op1=document.querySelector(".option1");
 const op2=document.querySelector(".option2");
@@ -11,6 +14,7 @@ let questionIndex;
 let index=0;
 let myArray=[];
 let myArr=[];
+let score=0;
 
 
 //Questions, options, answers
@@ -59,6 +63,8 @@ function check(element){
     if(element.id==questions[questionIndex].answer){
         element.classList.add("correct");
         updateAnswerTracker("correct")
+        score++;
+
     }
     else{
         element.classList.add("wrong");
@@ -100,7 +106,7 @@ function randomQuestion(){
     let randomNumber=Math.floor(Math.random()*questions.length);
     let hitDuplicate=0;
     if(index==questions.length){
-        console.log("quiz over")    
+        quizOver(); 
     }
     else{
         if(myArray.length>0){
@@ -140,7 +146,17 @@ function updateAnswerTracker(classNam){
     answerTrackerContainer.children[index-1].classList.add(classNam); 
 }
 
+function quizOver(){
+    document.querySelector(".quiz-over").classList.add("show");
+    correctAnswerSpan.innerHTML=score;
+    totalQuestionSpan2.innerHTML=questions.length;
+}
+
+function tryAgain(){
+   window.location.reload();
+}
+
 window.onload=function(){
-    randomQuestion()
-    answerTracker()
+    randomQuestion();
+    answerTracker();
 }

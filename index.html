@@ -18,14 +18,22 @@
         <div id="3" class="option4" onclick="check(this)"></div>
     </div>
     <div class = "button">
-    <button type="button" class="btn">Next</button>
+    <button type="button" class="btn" onclick="next()">Next</button>
     </div>
     <div class ="answers-tracker">
               
     </div>
 </div>
 
-
+<div class="quiz-over">
+    <div class="box">
+    <h1>
+        Good try!<br>
+        You got <span class="correct-answers"></span> out of <span class="total-question2"></span> answers correct! <br>
+    </h1>
+    <button type="button" onclick="tryAgain()">TryAgain</button>
+</div>
+</div>
 <script src="script.js"></script>
 </body>
 
