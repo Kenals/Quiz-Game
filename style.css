@@ -11,7 +11,7 @@ body {
     max-width: 700px;
     min-height: 500px;
     background-color: #ffffff;
-    margin: 30px auto;
+    margin: 40px auto;
     border-radius: 5px;
     padding: 30px;
 }
@@ -53,6 +53,7 @@ body {
     padding:15px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .options div.correct{
@@ -116,7 +117,7 @@ body {
     color: #ffffff;
     border: none;
     display: inline-block;
-    margin: 16px 0;
+    margin: 15px 0 20px;
 }
 
 .answers-tracker{
@@ -130,8 +131,23 @@ body {
     background-color: #cccccc;
     display: inline-block;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 5px;
+}
 
+.answers-tracker div.correct{
+    background-color: green;
+    background-image: url("img/correct.jfif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+ 
+.answers-tracker div.wrong{
+    background-color: red;
+    background-image: url("img/wrong.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
 }
 
   
