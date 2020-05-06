@@ -10,6 +10,7 @@ const op4=document.querySelector(".option4");
 let questionIndex;
 let index=0;
 let myArray=[];
+let myArr=[];
 
 
 //Questions, options, answers
@@ -97,14 +98,35 @@ function next(){
 
 function randomQuestion(){
     let randomNumber=Math.floor(Math.random()*questions.length);
+    let hitDuplicate=0;
     if(index==questions.length){
         console.log("quiz over")    
     }
-    console.log("index:"+index)
-    questionIndex=randomNumber;
-    myArray.push(questionIndex);
-    
-    load();
+    else{
+        if(myArray.length>0){
+            for(let i=0; i<myArray.length; i++){
+                if(myArray[i]==randomNumber){
+                    hitDuplicate=1;
+                    break;
+                }
+            }
+            if(hitDuplicate==1){
+                randomQuestion();
+            }
+            else{
+                questionIndex=randomNumber;
+                load();
+                myArr.push(questionIndex);
+            }
+        }
+        if(myArray.length==0){
+           questionIndex=randomNumber;
+           load();
+           myArr.push(questionIndex);
+        }
+        console.log("myArr:"+myArr);
+    myArray.push(randomNumber);
+    }
 }
 
 function answerTracker(){
