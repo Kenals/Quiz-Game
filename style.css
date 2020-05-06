@@ -153,7 +153,7 @@ background-size: 50%;
     z-index: 10;
     left:0;
     top:0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -163,11 +163,11 @@ display: flex;
 }
 
 .quiz-over .box{
-    background-color: #ffffff;
+    background-color: olivedrab;
     padding: 30px;
     border-radius: 5px;
     text-align: center;
-    color: olivedrab;
+    color: black;
     max-width: 700px;
     font-size: large;
     flex-basis:  700px;
@@ -180,3 +180,4 @@ border-radius: 5px;
 font-size: small;
 border: none;
 }
+ 

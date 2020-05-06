@@ -62,6 +62,7 @@ function check(element){
         element.classList.add("correct");
         updateAnswerTracker("correct")
         score++; 
+        console.log("score:"+score)
     }
     else{
         element.classList.add("wrong");
