@@ -97,9 +97,13 @@ function next(){
 
 function randomQuestion(){
     let randomNumber=Math.floor(Math.random()*questions.length);
+    if(index==questions.length){
+        console.log("quiz over")    
+    }
+    console.log("index:"+index)
     questionIndex=randomNumber;
     myArray.push(questionIndex);
-    console.log("myArray:"+myArray)
+    
     load();
 }
 
