@@ -1,15 +1,14 @@
-
-const options=document.querySelector(".options").children;
-const answerTrackerContainer=document.querySelector(".answers-tracker");
-const questionNumberSpan=document.querySelector(".question-num-value");
-const totalQuestionSpan=document.querySelector(".total-question");
-const correctAnswerSpan=document.querySelector(".correct-answers");
-const totalQuestionSpan2=document.querySelector(".total-question2");
-const question=document.querySelector(".question");
-const op1=document.querySelector(".option1");
-const op2=document.querySelector(".option2");
-const op3=document.querySelector(".option3");
-const op4=document.querySelector(".option4");
+let options=document.querySelector(".options").children;
+let answerTrackerContainer=document.querySelector(".answers-tracker");
+let questionNumberSpan=document.querySelector(".question-num-value");
+let totalQuestionSpan=document.querySelector(".total-question");
+let correctAnswerSpan=document.querySelector(".correct-answers");
+let totalQuestionSpan2=document.querySelector(".total-question2");
+let question=document.querySelector(".question");
+let op1=document.querySelector(".option1");
+let op2=document.querySelector(".option2");
+let op3=document.querySelector(".option3");
+let op4=document.querySelector(".option4");
 let questionIndex;
 let index=0;
 let myArray=[];
@@ -90,7 +89,7 @@ function enableOptions(){
     
 function validate(){
     if(!options[0].classList.contains("disabled")){
-        alert("Please Choose one option")
+        alert("Please choose one option")
     }
     else{
         enableOptions();

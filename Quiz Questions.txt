@@ -78,108 +78,11 @@ let myArray=[];
 let myArr=[]; 
 let score=0;
 
-
-function check(element){
-    if(element.id==questions[questionIndex].answer){
-        element.classList.add("correct");
-        updateAnswerTracker("correct")
-        score++; 
-        console.log("score:"+score)
-    }
-    else{
-        element.classList.add("wrong");
-        updateAnswerTracker("wrong")
-    }
-    disabledOptions()
-}
-
-function disabledOptions(){
-    for(let i=0; i<options.length; i++) {
-        options[i].classList.add("disabled");
-        if(options[i].id==questions[questionIndex].answer){
-        options[i].classList.add("correct");
-        }
-    }
-  
-}
-
-function enableOptions(){
-    for(let i=0; i<options.length; i++) {
-        options[i].classList.remove("disabled","correct","wrong"); 
-    } 
-}
-
-function validate(){
-  if(option[0].classList.contains("disabled")){
-      alert("Please Choose One Option")
-  } 
-  else{
-      enableOptions();
-      randomQuestion();
-
-  } 
-}
-
-function next(){
-    Validate();
-}
-
-function randomQuestion(){
-    let randomNumber=Math.floor(Math.random()*questions.length);
-    let hitDuplicate=0;
-    if(index==questions.length){
-     quizOver();   
- }
-  else{
-      if(myArray.length>0){
-for(let i=0; i<myArray.length; i++){
-    if(myArray[i]==randomNumber){
-        hitDuplicate=1;
-        break;
-    }
-  }
-
-  if (hitDuplicate==1){
-      randomQuestion();
-  } 
-  else{
-    questionIndex=randomNumber; 
-    load();
-    myArr.push(questionIndex);
-  }
-}
-
- if(myArray.length==0){
-        questionIndex=randomNumber;
-        load(); 
-        myArr.push(questionIndex); 
-      }
-    myArray.push(randomNumber);
-      }
-}
-
-function answerTracker(){
-    for(let i=0; i<questions.length; i++){
-        let div=document.createElement("div")
-        answerTrackerContainer.appendChild(div);
-    }
-}
-
-function updateAnswerTracker(classNam){
-    answerTrackerContainer.children[index-1].classList.add(classNam);
-}
-
-function quizOver(){
-    document.querySelector(".quiz-Over").classList.add("show");
-    correctAnswerSpan.innerHTML=score;
-    totalQuestionSpan2.innerHTML=questions.length;
-}
-
-function tryAgain(){
-    window.location.reload();
-} 
-window.onload=function(){
-    randomQuestion();
-    answerTracker(); 
-
+@keyframes animateBackground{
+    0%{
+        transform: translateX(-100%);
+   }
+   100%{
+    transform: translateX(0%);
+   }
 }

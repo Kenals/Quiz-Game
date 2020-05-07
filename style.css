@@ -1,19 +1,19 @@
 body {
     margin: 0;
-    background-color: #009688;
-    font-family: sans-serif;    
+    background-color: goldenrod;
+    font-family: Georgia, 'Times New Roman', Times, serif;    
 }
 *{
     box-sizing: border-box;
 }
 
 .quiz-container{
-    max-width: 700px;
-    min-height: 500px;
-    background-color: #ffffff;
+    max-width: 800px;
+    min-height: 600px;
+    background-color: black;
     margin: 40px auto;
-    border-radius: 5px;
-    padding: 30px;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .quiz-container::after,.quiz-container::before{
@@ -22,32 +22,28 @@ body {
     display: table;
 }
 
-.question-number,
-.question,
-.options,
-.button,
 .answers-tracker{
     float: left;
     width: 100%;
 }
 
 .question-number h3{
-    color:#009688;
-    border-bottom: 1px solid #ccc;
+    color:goldenrod;
+    border-bottom: 1px solid goldenrod;
     margin:0;
     padding-bottom:10px;
 }
 
 .question {
-    font-size: 22px;
-    color: #000000;
+    font-size: 25px;
+    color: goldenrod;
     padding: 20px 0;
 }
  
 .options div{
-    background-color: #cccccc;
+    background-color:black;
     font-size: 16px;
-    color: #000000;
+    color: goldenrod;
     margin-bottom: 10px;
     border-radius: 5px;
     padding:15px;
@@ -86,6 +82,7 @@ body {
    }
 }
 
+
 .options div.wrong{
     z-index: 1;
     color: #fff;
@@ -115,17 +112,18 @@ body {
 .button .btn{
     padding: 15px 50px;
     border-radius: 5px;
-    cursor: pointer;
-    background-color: #009688;
-    font-size: 16px;
-    color: #ffffff;
+    background-color: goldenrod;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
     border: none;
     display: inline-block;
     margin: 15px 0 20px;
+    cursor: pointer;
 }
 
 .answers-tracker{
-    border-top: 1px solid #ccc;
+    border-top: 1px solid goldenrod;
     padding-top: 15px;
 }
 
@@ -135,12 +133,12 @@ body {
     background-color: #cccccc;
     display: inline-block;
     border-radius: 50%;
-    margin-right: 5px;
+    margin: 5px 5px 0;
 }
 
 .answers-tracker div.correct{
     background-color: green;
-    background-image: url("img/correct.jfif");
+    background-image: url("img/Check.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 50%;
@@ -172,26 +170,27 @@ body {
 }
 
 .quiz-over .box{
-    background-color: #089588;
+    background-color: goldenrod;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     flex-basis: 700px;
     max-width: 700px;
-    color: #ffffff;
+    color: black;
 }
 
 .quiz-over .box h1{
-    font-size: 36px;
+    font-size: 30px;
     margin: 0 0 20px;
 }
 
 .quiz-over .box button{
     padding: 15px 50px;
     border: none;
-    background-color: #FF9800;
+    background-color: black;
     border-radius: 5px;
     font-size: 16px;
+    font-weight: bold;
     margin: 15px 0 20px;
-    color: #ffffff;
+    color: goldenrod;
 }
